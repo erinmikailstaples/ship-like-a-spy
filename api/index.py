@@ -6,11 +6,6 @@ app = FastAPI()
 def hello_world():
     return {"message": "Hello World"}
 
-app = FastAPI()
-
-@app.get("/api/python")
-def hello_world():
-    return {"message": "Hello World"}
 
 # # from fastapi import FastAPI
 # from pydantic import BaseModel
