@@ -4,10 +4,12 @@ from typing import Annotated
 import os
 import uvicorn
 import pymysql
+## from the launchdarkly sdk
+from ldclient.config import Config
 
 ## make sure LD is installed in your environment
-### pip install launchdarkly-server-sdk
-## from ldclient.config import Config
+### use pip install launchdarkly-server-sdk
+
 
 ## configure your LD SDK Key
 ### ldclient.set_config(Config(sdk_key="YOUR_SDK_KEY"))
