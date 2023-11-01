@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 # import launchdarkly_server_sdk as ldclient
-from ldclient import LDClient
-from ldclient.config import ldclient
+import ldclient
 from ldclient.config import Config
 import os
 
