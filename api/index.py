@@ -34,9 +34,6 @@ def hello_world():
         return {"message": "Beta Feature is ON"}
 
 
-
-
-
 LD_KEY = os.environ.get('LD_SERVER_KEY')
 
 
