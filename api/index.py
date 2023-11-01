@@ -10,6 +10,8 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
+LD_KEY = os.environ.get('LD_SERVER_KEY')
+
 # sample user for LD purposes - static user here for testing
 # user =  {
 #     "key": "user-key-123abc",
@@ -33,7 +35,7 @@ def hello_world():
         return {"message": "Beta Feature is ON"}
 
 
-LD_KEY = os.environ.get('LD_SERVER_KEY')
+
 
 
 
