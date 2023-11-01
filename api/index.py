@@ -8,7 +8,7 @@ from ldclient.config import Config
 app = FastAPI()
 
 @app.get("/api/python")
-def hello_world():
+def read_root():
     return {"message": "the name's bond, james bond🍸"}
 
 # sample user for LD purposes - static user here for testing
