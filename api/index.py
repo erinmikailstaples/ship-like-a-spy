@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from pydantic import BaseModel, EmailStr
 # import launchdarkly_server_sdk as ldclient
 import ldclient
 from ldclient.config import Config
