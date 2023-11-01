@@ -1,45 +1,53 @@
 from fastapi import FastAPI
-# import launchdarkly_server_sdk as ldclient
-import ldclient
-from ldclient.config import Config
-
-# create the FastAPI app
 
 app = FastAPI()
 
 @app.get("/api/python")
-def read_root():
-    return {"message": "the name's bond, james bond🍸"}
+def hello_world():
+    return {"message": "Hello World"}
 
-# sample user for LD purposes - static user here for testing
-# class User(BaseModel):
-#     key: 007
-#     firstName: "James",
-#     lastName: Bond,
-#     "key": "007",
-#     "firstName": "James",
-#     "lastName": "Bond",
-#     "email": "spystuff007@example.com",
-#     "custom": {
-#         "groups": ["superspy"]
-#     }
-# }
+# from fastapi import FastAPI
+# # import launchdarkly_server_sdk as ldclient
+# import ldclient
+# from ldclient.config import Config
+
+# # create the FastAPI app
+
+# app = FastAPI()
+
+# @app.get("/api/python")
+# def read_root():
+#     return {"message": "the name's bond, james bond🍸"}
+
+# # sample user for LD purposes - static user here for testing
+# # class User(BaseModel):
+# #     key: 007
+# #     firstName: "James",
+# #     lastName: Bond,
+# #     "key": "007",
+# #     "firstName": "James",
+# #     "lastName": "Bond",
+# #     "email": "spystuff007@example.com",
+# #     "custom": {
+# #         "groups": ["superspy"]
+# #     }
+# # }
 
 
-# # here is where we'll launch some LD magic with our feature flags
-# # your keys can be foudn on the Account settings page under the Environments tab for each project.
-#     ldclient.set_config(Config("sdk-5709bc2e-ae00-450a-b3d8-3adf981ffd5"))
-#     show_feature = ldclient.variation("earlyLaunch", user, False)
-#     if show_feature:
-#         print("earlyLaunch is ON!!!")
-#     else:
-#         print("earlyLaunch is OFF!!!")
+# # # here is where we'll launch some LD magic with our feature flags
+# # # your keys can be foudn on the Account settings page under the Environments tab for each project.
+# #     ldclient.set_config(Config("sdk-5709bc2e-ae00-450a-b3d8-3adf981ffd5"))
+# #     show_feature = ldclient.variation("earlyLaunch", user, False)
+# #     if show_feature:
+# #         print("earlyLaunch is ON!!!")
+# #     else:
+# #         print("earlyLaunch is OFF!!!")
 
-# ldclient.close()
+# # ldclient.close()
 
 
 
-# ldclient = LDClient("0")
+# # ldclient = LDClient("0")
 
 
 
