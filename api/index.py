@@ -8,6 +8,10 @@ from ldclient.config import Config
 
 app = FastAPI()
 
+@app.get("/api/python")
+def hello_world():
+    return {"message": "the name's bond, james bond🍸"}
+
 # sample user for LD purposes - static user here for testing
 # class User(BaseModel):
 #     key: 007
@@ -22,9 +26,7 @@ app = FastAPI()
 #     }
 # }
 
-@app.get("/api/python")
-def hello_world():
-    return {"message": "the name's bond, james bond🍸"}
+
 # # here is where we'll launch some LD magic with our feature flags
 # # your keys can be foudn on the Account settings page under the Environments tab for each project.
 #     ldclient.set_config(Config("sdk-5709bc2e-ae00-450a-b3d8-3adf981ffd5"))
