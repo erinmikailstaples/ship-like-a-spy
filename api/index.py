@@ -13,15 +13,15 @@ app = FastAPI()
 LD_KEY = os.environ.get('LD_SERVER_KEY')
 
 # sample user for LD purposes - static user here for testing
-# user =  {
-#     "key": "user-key-123abc",
-#     "firstName": "James",
-#     "lastName": "Bond",
-#     "email": "spystuff007@example.com",
-#     "custom": {
-#         "groups": ["superspy"]
-#     }
-# }
+user =  {
+    "key": "007",
+    "firstName": "James",
+    "lastName": "Bond",
+    "email": "spystuff007@example.com",
+    "custom": {
+        "groups": ["superspy"]
+    }
+}
 
 
 @app.get("/api/python")
