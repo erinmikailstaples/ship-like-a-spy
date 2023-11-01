@@ -11,8 +11,6 @@ app = FastAPI()
 def hello_world():
     return {"message": "Hello World"}
 
-from fastapi import FastAPI, HTTPException, Depends, status
-
 # Retrieve MySQL credentials from environment variables
 mysql_user = os.getenv("MYSQLUSER")
 mysql_password = os.getenv("MYSQLPASSWORD")
