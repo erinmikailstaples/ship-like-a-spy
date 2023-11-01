@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from pydantic import BaseModel, EmailStr
 # import launchdarkly_server_sdk as ldclient
 import ldclient
 from ldclient.config import Config
@@ -8,19 +9,22 @@ from ldclient.config import Config
 app = FastAPI()
 
 # sample user for LD purposes - static user here for testing
-user =  {
-    "key": "007",
-    "firstName": "James",
-    "lastName": "Bond",
-    "email": "spystuff007@example.com",
-    "custom": {
-        "groups": ["superspy"]
-    }
-}
+# class User(BaseModel):
+#     key: 007
+#     firstName: "James",
+#     lastName: Bond,
+#     "key": "007",
+#     "firstName": "James",
+#     "lastName": "Bond",
+#     "email": "spystuff007@example.com",
+#     "custom": {
+#         "groups": ["superspy"]
+#     }
+# }
 
 @app.get("/api/python")
 def hello_world():
-    print("the name's bond, james bond🍸")
+    return {"message": "the name's bond, james bond🍸"}
 # # here is where we'll launch some LD magic with our feature flags
 # # your keys can be foudn on the Account settings page under the Environments tab for each project.
 #     ldclient.set_config(Config("sdk-5709bc2e-ae00-450a-b3d8-3adf981ffd5"))
